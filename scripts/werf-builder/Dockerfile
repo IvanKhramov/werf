@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 golang:1.21-bookworm@sha256:cbee5d27649be9e3a48d4d152838901c65d7f8e803f4cc46b53699dd215b555f
+FROM --platform=linux/amd64 golang:1.23-bookworm@sha256:31dc846dd1bcca84d2fa231bcd16c09ff271bcc1a5ae2c48ff10f13b039688f3
 
 ENV DEBIAN_FRONTEND=noninteractive
 
