@@ -56,7 +56,7 @@ tasks:
 
   _build:go:dev: &build_go_dev
     cmds:
-      - go build -o "{{.outputDir | default (printf "./build/%s-%s" .targetOS .targetArch)}}/werf{{if (eq .targetOS "windows")}}.exe{{end}}"
+      - go build -race -o "{{.outputDir | default (printf "./build/%s-%s" .targetOS .targetArch)}}/werf{{if (eq .targetOS "windows")}}.exe{{end}}"
         -ldflags="{{.goDevLDFlags}}" -tags="{{.goTags}}" {{.extraGoBuildArgs}} {{.CLI_ARGS}} {{.pkg | default .package}}
     env:
       CGO_ENABLED: "0"
